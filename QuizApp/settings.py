@@ -1,7 +1,6 @@
 
-
-from pathlib import Path
 import os
+from pathlib import Path
 import django_heroku
 import dj_database_url
 
@@ -80,7 +79,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+
 }
+DATABASES['default'] =  dj_database_url.config()
+
 
 
 # Password validation
