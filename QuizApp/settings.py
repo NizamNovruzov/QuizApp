@@ -8,6 +8,13 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import os.path
+PROJECT_DIR = os.path.dirname(__file__) # this is not Django setting.
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_DIR, "templates"),
+    # here you can add another templates directory if you wish.
+)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
